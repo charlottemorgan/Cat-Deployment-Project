@@ -4,7 +4,10 @@ const Home = () => {
   return(
     <section className="section">
       <div className="container">
-        <h1 className="title is-1">Home</h1>
+        <figure className="image" id="giphy">
+          <h2 className="title is-1">CATS</h2>
+          <iframe src="https://giphy.com/embed/o0vwzuFwCGAFO" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-hacker-webs-o0vwzuFwCGAFO"></a></p>
+        </figure>
       </div>
     </section>
   )

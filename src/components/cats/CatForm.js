@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CatForm = ({ cats, handleChange, handleSubmit, errors }) => {
+const CatForm = ({ cats, handleChange, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="field">
@@ -14,20 +14,18 @@ const CatForm = ({ cats, handleChange, handleSubmit, errors }) => {
             value={cats.name}
           />
         </div>
-        {errors.name && <small className="help is-danger">Please enter a name</small>}
       </div>
       <div className="field">
         <label className="label">Age</label>
         <div className="control">
           <input
             className="input"
-            placeholder="age"
+            placeholder="Age"
             name="age"
             onChange={handleChange}
             value={cats.age}
           />
         </div>
-        {errors.name && <small className="help is-danger">Please add an age</small>}
       </div>
       <div className="field">
         <label className="label">Color</label>
@@ -40,13 +38,12 @@ const CatForm = ({ cats, handleChange, handleSubmit, errors }) => {
             value={cats.color}
           />
         </div>
-        {errors.name && <small className="help is-danger">Please add an image</small>}
       </div>
       <div className="field">
         <label className="label">Image</label>
         <div className="control">
           <textarea
-            className="textarea"
+            className="input"
             placeholder="Image"
             name="image"
             onChange={handleChange}
@@ -58,7 +55,7 @@ const CatForm = ({ cats, handleChange, handleSubmit, errors }) => {
         <label className="label">Gender</label>
         <div className="control">
           <textarea
-            className="textarea"
+            className="input"
             placeholder="Gender"
             name="gender"
             onChange={handleChange}
@@ -70,7 +67,7 @@ const CatForm = ({ cats, handleChange, handleSubmit, errors }) => {
         <label className="label">Breed</label>
         <div className="control">
           <textarea
-            className="textarea"
+            className="input"
             placeholder="Breed"
             name="breed"
             onChange={handleChange}
@@ -79,7 +76,7 @@ const CatForm = ({ cats, handleChange, handleSubmit, errors }) => {
         </div>
       </div>
 
-      <button className="button is-primary">Submit</button>
+      <button className="button">Submit</button>
     </form>
   )
 }
