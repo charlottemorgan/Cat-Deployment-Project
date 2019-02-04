@@ -5,4 +5,7 @@ router.route('/cats')
   .get(catsController.index)
   .post(catsController.create)
 
+router.route('/cats/:id')
+  .get(catsController.show)
+
 module.exports = router

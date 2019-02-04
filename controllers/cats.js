@@ -13,7 +13,14 @@ function createRoute(req, res) {
     .catch(err => res.status(422).json(err.errors))
 }
 
+function showRoute(req, res) {
+  Cat
+    .findById(req.params.id)
+    .then(film => res.status(200).json(film))
+}
+
 module.exports = {
   index: indexRoute,
-  create: createRoute
+  create: createRoute,
+  show: showRoute
 }

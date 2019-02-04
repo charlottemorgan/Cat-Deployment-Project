@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 
+import CatCard from './CatCard.js'
 
 class CatsIndex extends React.Component {
 
@@ -28,8 +29,8 @@ class CatsIndex extends React.Component {
         <div className="container">
           <div className="columns is-multiline">
             {this.state.cats.map((cat, i) =>
-              <div className="column is-one-quarter" key={cat.name}>
-                <p key={i}>{cat.name}</p>
+              <div className="column is-one-quarter" key={i}>
+                <CatCard {...cat} />
               </div>
             )}
           </div>
